@@ -1,0 +1,1 @@
+<resources><!-- The text style inherits platform typography and overrides its color. --><style name="OceanText" parent="@android:style/TextAppearance.Material.Headline"><item name="android:textColor">#006064</item></style><style name="OceanTheme" parent="@android:style/Theme.Material.Light"><item name="android:colorAccent">#006064</item></style></resources>

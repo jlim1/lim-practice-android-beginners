@@ -1,0 +1,20 @@
+configurations { gameNatives }
+dependencies {
+    implementation 'com.badlogicgames.gdx:gdx:1.12.1'
+    implementation 'com.badlogicgames.gdx:gdx-backend-android:1.12.1'
+    ['arm64-v8a', 'armeabi-v7a', 'x86', 'x86_64'].each { abi -> gameNatives "com.badlogicgames.gdx:gdx-platform:1.12.1:natives-$abi" }
+}
+def nativeFolder = layout.buildDirectory.dir('generated/jniLibs')
+// Each native library is packaged under the ABI directory Android uses to load it.
+def unpack = tasks.register('unpackGameNatives', Sync) {
+    inputs.files(configurations.gameNatives)
+    into(nativeFolder)
+    ['arm64-v8a', 'armeabi-v7a', 'x86', 'x86_64'].each { abi ->
+        from({ configurations.gameNatives.files.findAll { it.name.endsWith("natives-$abi" + ".jar") }.collect { zipTree(it) } }) {
+            include '*.so'
+            into abi
+        }
+    }
+}
+android.sourceSets.main.jniLibs.srcDir(nativeFolder)
+tasks.named('preBuild').configure { dependsOn(unpack) }

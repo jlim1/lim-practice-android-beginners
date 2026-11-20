@@ -1,0 +1,54 @@
+// Each project maps a numbered lesson to its own application module.
+pluginManagement { repositories { google(); mavenCentral(); gradlePluginPortal() } }
+dependencyResolutionManagement { repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS); repositories { google(); mavenCentral() } }
+rootProject.name = 'BuckyAndroidPractice'
+include ':lesson0'
+project(':lesson0').projectDir = file('000_LibGDXBasicTemplate')
+include ':lesson10'
+project(':lesson10').projectDir = file('010_States of an Activity')
+include ':lesson11'
+project(':lesson11').projectDir = file('011-012 User Interface')
+include ':lesson13'
+project(':lesson13').projectDir = file('013-016 Java Layout')
+include ':lesson17'
+project(':lesson17').projectDir = file('017 GridLayout')
+include ':lesson18'
+project(':lesson18').projectDir = file('018-020 Events/lesson18')
+include ':lesson20'
+project(':lesson20').projectDir = file('018-020 Events/lesson20')
+include ':lesson21'
+project(':lesson21').projectDir = file('021-022_Gestures App')
+include ':lesson31'
+project(':lesson31').projectDir = file('031-032 MasterDetailFlow')
+include ':lesson33'
+project(':lesson33').projectDir = file('033 Overflow Menu')
+include ':lesson34'
+project(':lesson34').projectDir = file('034 Transition')
+include ':lesson35'
+project(':lesson35').projectDir = file('035-036 Intents')
+include ':lesson37'
+project(':lesson37').projectDir = file('037_SendingBroadcastIntents')
+include ':lesson39'
+project(':lesson39').projectDir = file('039-040 Threads')
+include ':lesson41'
+project(':lesson41').projectDir = file('041-042 Intent Service')
+include ':lesson43'
+project(':lesson43').projectDir = file('043-044 Bound Services')
+include ':lesson45'
+project(':lesson45').projectDir = file('045-048 List Items/lesson45')
+include ':lesson47'
+project(':lesson47').projectDir = file('045-048 List Items/lesson47')
+include ':lesson49'
+project(':lesson49').projectDir = file('049-054 SQLite')
+include ':lesson56'
+project(':lesson56').projectDir = file('056-057 Camera Intent')
+include ':lesson61'
+project(':lesson61').projectDir = file('061-062 Notifications')
+include ':lesson63'
+project(':lesson63').projectDir = file('063-064 Styles and Themes')
+include ':lesson65'
+project(':lesson65').projectDir = file('065-066 Shared Preferences')
+include ':lesson75'
+project(':lesson75').projectDir = file('075_LibGDXHandlingUserInput')
+include ':lessonsqlite'
+project(':lessonsqlite').projectDir = file('SqQLiteSample/app')
