@@ -50,5 +50,10 @@ include ':lesson65'
 project(':lesson65').projectDir = file('065-066 Shared Preferences')
 include ':lesson75'
 project(':lesson75').projectDir = file('075_LibGDXHandlingUserInput')
+include ':lesson23', ':lesson55', ':lesson76', ':lesson77'
+project(':lesson23').projectDir = file('023-030_DankMeme')
+project(':lesson55').projectDir = file('055 Play Video')
+project(':lesson76').projectDir = file('076_LibGDXCamera')
+project(':lesson77').projectDir = file('077_LibGDXPlaySoundsAndStreamMusic')
 include ':lessonsqlite'
 project(':lessonsqlite').projectDir = file('SqQLiteSample/app')
